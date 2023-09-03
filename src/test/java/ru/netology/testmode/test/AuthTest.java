@@ -32,8 +32,7 @@ class AuthTest {
                 .shouldHave(Condition.text("Личный кабинет"))
                 .shouldBe(Condition.visible);
     }
-//
-//
+
     @Test
     @DisplayName("Should get error message if login with not registered user")
     void shouldGetErrorIfNotRegisteredUser() {
@@ -45,7 +44,7 @@ class AuthTest {
                 .shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль"))
                 .shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
-//
+
     @Test
     @DisplayName("Should get error message if login with blocked registered user")
     void shouldGetErrorIfBlockedUser() {
